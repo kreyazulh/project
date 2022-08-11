@@ -1,0 +1,40 @@
+.state3-top{
+    border: 1px solid black;
+    color: white;
+    display: grid;
+    height: 660px;
+    grid-template-columns: repeat(2,50%);
+    background-color: #364583;
+}
+.navContain{
+    
+    display: grid;
+    height: 660px;
+    align-content: center;
+}
+.navDiv{
+    height: 70px;
+    width: 200px;
+    margin: 5px;
+}
+.nav1{
+    justify-self: end;
+}
+.nav2{
+    justify-self: start;
+}
+.topNavBtn{
+    margin: 5px;
+    height: 80%;
+    width: 90%;
+    background-color: #F57359;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    border: 0;
+
+}
+.topNavBtn:hover{
+    background-color: #ce634e;
+}

@@ -1,0 +1,30 @@
+
+.fresher-description{
+    height: 300px;
+    text-align: left;
+    padding: 40px;
+    color: white;
+    background-color: rgb(19, 5, 91);
+}
+.mid-1{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 450px;
+}
+.mid1-right{
+    border: 1px solid white;
+}
+.mid1-left{
+    border: 1px solid white;
+}
+.mid-2{
+    display: grid;
+    height: 450px;
+    grid-template-columns: 60% auto;
+}
+.mid2-right{
+    border: 1px solid white;
+}
+.mid2-left{
+    border: 1px solid white;
+}
