@@ -12,7 +12,7 @@ import Welcome from './Component/Welcome';
 import LogIn2 from './Component/login2/login2';
 import Signup from './Component/register2/signup';
 import Profile from './Component/Profile/Profile';
-
+import AskQues from './Component/askques/askques';
 //import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
 //import Signup from './Component/register2/signup';
 import {createContext, useState} from 'react';
@@ -46,6 +46,7 @@ function App() {
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/nav' element={<Nav/>}/>
           <Route path='/blog' element={<Blog/>}/>
+          <Route path='/ques' element={<AskQues/>}/>
           <Route path="*" element={<p>There's nothing here: 404!</p>} />   
         
         </Routes>
