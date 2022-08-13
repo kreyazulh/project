@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './login2.css';
 
-const LogIn2 = ({state,setState}) => {
+const LogIn2 = ({state}) => {
     
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [aboutPassword,setAboutPassword]=useState('')
@@ -13,6 +13,7 @@ const LogIn2 = ({state,setState}) => {
     let location = useLocation();
     let [user,setUser] = useState();
     
+    
     const handleChange = (event) =>
      {
         console.log("here")  ;
@@ -21,11 +22,11 @@ const LogIn2 = ({state,setState}) => {
         setWrongUser('')
         console.log(event.target.name, event.target.value)
 
-        if (event.target.name === 'email') {
+        if (event.target.name === 'EMAIL') {
             isFormValid = /\S+@\S+\.\S+/.test(event.target.value)
 
         }
-        if (event.target.name === 'password') {
+        if (event.target.name === 'PASSWORD') {
             const isPasswordValid = event.target.value.length > 6;
             console.log(aboutPassword)
             const passwordHasNumber = /\d{1}/.test(event.target.value)
@@ -49,9 +50,10 @@ const LogIn2 = ({state,setState}) => {
         event.preventDefault();
         console.log("jfsjf") ; 
         console.log(user);
+        
 
         try {
-            console.log("in try") ; 
+            console.log("in try in login2 loginuser") ; 
             const res = await fetch('http://localhost:3000/member/login', {
                 method: 'POST',
                 headers: {
@@ -63,8 +65,6 @@ const LogIn2 = ({state,setState}) => {
             })
             
             const data = await res.json()  
-            
-            
             console.log(data)
             if(data.length === 0){
                 setWrongUser('Wrong Email or password')
@@ -73,11 +73,10 @@ const LogIn2 = ({state,setState}) => {
                 setLoggedInUser(data[0]);
                 console.log(data);
                 window.localStorage.setItem("token",JSON.stringify(data[0]))
-                //setState({ state: this.state= 2 })
-                //setState(2)
-
                 
-                navigate(location?.state?.from || '/', {replace:true})
+                //console.log(state) ; 
+                
+                navigate(location?.state?.from || '/nav', {replace:true})
             }
    
         } catch (error) {
@@ -122,5 +121,3 @@ const LogIn2 = ({state,setState}) => {
     export default LogIn2;
 
 
-
-    

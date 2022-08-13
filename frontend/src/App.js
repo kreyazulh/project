@@ -1,25 +1,31 @@
 import './App.css';
 //import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './Component/Home/Home'
-import Login from './Component/login';
-import Home from './Component/Home/Home';
-import LogIn2 from './Component/login2/login2';
-import Signup from './Component/register2/signup';
+import Home from './Component/Home/Home'
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
+
+import Welcome from './Component/Welcome';
+import LogIn2 from './Component/login2/login2';
+import Signup from './Component/register2/signup';
+import Profile from './Component/Profile/Profile';
+
 //import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
-import Register from './Component/Register/Register';
-import { createContext, useState} from 'react';
-export   const UserContext=createContext();
+//import Signup from './Component/register2/signup';
+import {createContext, useState} from 'react';
+import Nav from './Component/Home/TopComp/Nav/Nav';
+
+export const UserContext=createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser]=useState();
+ // const [loggedInUser, setLoggedInUser]=useState();
+ const [loggedInUser, setLoggedInUser]=useState(JSON.parse(window.localStorage.getItem('token')));
 
   const [color, changeColor] = useState("white");
-  // const [color, changeColor] = useState("#ffffff");
+  
 
   document.body.style.backgroundColor = color;
   
@@ -34,10 +40,13 @@ function App() {
       </header>
 
       <Routes>
-          <Route path='/' element={<Login/>}/>
+          <Route path='/' element={<Welcome></Welcome>}/>
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/login' element={<LogIn2/>}/>
-
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/nav' element={<Nav/>}/>
+          <Route path="*" element={<p>There's nothing here: 404!</p>} />   
+        
         </Routes>
 
 

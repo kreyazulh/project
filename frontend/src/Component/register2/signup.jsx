@@ -32,7 +32,7 @@ const Signup = () => {
             isFormValid = isPasswordValid && passwordHasNumber
         }
         if (event.target.name === 'confirmPass') {
-            const confirmPass=(event.target.value===loggedInUser['password'])?'':'password does not match'
+            const confirmPass=(event.target.value===loggedInUser['PASSWORD'])?'':'password does not match'
             setPassConfirmation(confirmPass)
         }
         if (isFormValid) {
@@ -58,12 +58,13 @@ const Signup = () => {
             .then((res)=>{
                
                 res.json()
-                //console.log(res.data) ; 
+                console.log('In signup then res')
+                console.log(res.data) ; 
                 
             })
             .then(data=>{
                 console.log(data)
-                console.log('hello2')
+                console.log('In signup then data')
                 navigate(location?.state?.from || '/', {replace:true})
             })
         } catch (error) {
@@ -91,23 +92,30 @@ const Signup = () => {
                <form action="">
                             
                             <input className="input-field" onChange={handleChange} name="EMAIL" type="text" placeholder="Email" required/>
+                           
                             <div className='fullNameContainer'>
                                 <input className="input-field" onChange={handleChange} name="NAME" type="text" placeholder="First Name" required/>
+                                <hr></hr>
                                 <input className="input-field" onChange={handleChange} name="COUNTRY" type="text" placeholder="Country" required/>
-                                
+                                <hr></hr>
                             
                             </div>
+                             
                             <div className='passwordContainer'>
                                 <div>
+                                    
                                     <input className="input-field" type="password" onChange={handleChange} name="PASSWORD" placeholder="Password"required />
+                                    
+                                    <hr></hr>
                                     <small style={{color:'red'}}>{aboutPassword}</small>
                                 </div>
                                 <div>
                                     <input className="input-field" onChange={handleChange}  name="confirmPass" type="password" placeholder="Confirm Passsword" required />
+                                    <hr></hr>
                                     <small style={{color:'red'}}>{passConfirmation}</small>
                                 </div>
                             </div>
-                            
+                            <hr></hr>
                             <input type="submit" value="Create Account" onClick={CreateUser} className="createBtn" /> 
                             
                

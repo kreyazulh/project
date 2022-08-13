@@ -1,8 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , Navigate } from 'react-router-dom';
 import './Nav.css'
 
 const Nav = () => {
+    const logout = ()=>
+    {
+        window.localStorage.clear() ; 
+        Navigate('/' , {replace:true}) ; 
+        window.location.reload() ;
+    }
     return (
 
         <div>
@@ -24,10 +30,10 @@ const Nav = () => {
                         <Link to = '/blog'><button className='topNavBtn'>Blog</button></Link>
                     </div>
                     <div className='navDiv nav2'>
-                        <Link to = '/info'><button className='topNavBtn'>About us</button></Link>
+                        <Link to = '/profile'><button className='topNavBtn'>profile</button></Link>
                     </div>
                     <div className='navDiv nav3'> 
-                        <Link to = '/login'><button className='topNavBtn'>log out</button></Link>
+                        <Link to = '/' onClick={logout}><button className='topNavBtn'>log out</button></Link>
                     </div>
                 </div>
                 
