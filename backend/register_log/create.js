@@ -3,6 +3,8 @@ const con = require('../Connection') ;
 
 const handle = {} 
 
+// add the type as a dropdown option maybe 
+//hardcode admin for it 
 
 handle.create = async(NAME , PASSWORD , COUNTRY , EMAIL) => 
 {

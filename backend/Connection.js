@@ -1,5 +1,5 @@
 const db = require('oracledb') ; 
-db.autoCommit = true ; //idk 
+db.autoCommit = true ;
 
 const func = {}
 
