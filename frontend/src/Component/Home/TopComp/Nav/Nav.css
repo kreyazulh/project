@@ -4,7 +4,7 @@
     display: grid;
     height: 660px;
     grid-template-columns: repeat(2,50%);
-    background-color: #364583;
+    background-color: #2cb541;
 }
 .navContain{
     
@@ -27,7 +27,7 @@
     margin: 5px;
     height: 80%;
     width: 90%;
-    background-color: #F57359;
+    background-color: #1bbbca;
     color: white;
     font-weight: bold;
     font-size: 20px;

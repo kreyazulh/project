@@ -27,7 +27,7 @@ const Nav = () => {
 
                 <div className="navContain">
                     <div className='navDiv nav2'>
-                        <Link to = '/blog'><button className='topNavBtn'>Blog</button></Link>
+                        <Link to = '/blog'><button className='topNavBtn'>Add Blog Post </button></Link>
                     </div>
                     <div className='navDiv nav2'>
                         <Link to = '/profile'><button className='topNavBtn'>profile</button></Link>

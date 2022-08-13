@@ -92,7 +92,7 @@ const Signup = () => {
                <form action="">
                             
                             <input className="input-field" onChange={handleChange} name="EMAIL" type="text" placeholder="Email" required/>
-                           
+                            <hr></hr>
                             <div className='fullNameContainer'>
                                 <input className="input-field" onChange={handleChange} name="NAME" type="text" placeholder="First Name" required/>
                                 <hr></hr>

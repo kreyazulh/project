@@ -17,7 +17,7 @@ import Profile from './Component/Profile/Profile';
 //import Signup from './Component/register2/signup';
 import {createContext, useState} from 'react';
 import Nav from './Component/Home/TopComp/Nav/Nav';
-
+import Blog from './Component/BlogPost/blog';
 export const UserContext=createContext();
 
 function App() {
@@ -45,6 +45,7 @@ function App() {
           <Route path='/login' element={<LogIn2/>}/>
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/nav' element={<Nav/>}/>
+          <Route path='/blog' element={<Blog/>}/>
           <Route path="*" element={<p>There's nothing here: 404!</p>} />   
         
         </Routes>
