@@ -18,7 +18,7 @@ const Nav = () => {
                         <Link to = '/problemset'><button className='topNavBtn'>Problemset</button></Link>
                     </div>
                     <div className='navDiv nav1'>
-                        <Link to = '/contest'><button className='topNavBtn'>Contest</button></Link>
+                        <Link to = '/showblogs'><button className='topNavBtn'>Blogs</button></Link>
                     </div>
                     <div className='navDiv nav1'> 
                         <Link to = '/ques'><button className='topNavBtn'>Questions</button></Link>
