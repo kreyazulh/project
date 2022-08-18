@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
+import Header2 from '../header2';
 //import NavBar from '../NavBar/NavBar';
 import './profile.css'
 

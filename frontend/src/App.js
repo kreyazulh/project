@@ -9,7 +9,12 @@ import {
 } from "react-router-dom";
 
 import Welcome from './Component/Welcome';
+import HomePage from './Component/homepage';
+import Profile2 from './Component/Profile/profile2';
+import AskQues2 from './Component/askques/askques2';
+import Login from './Component/login';
 import LogIn2 from './Component/login2/login2';
+import Blog2 from './Component/BlogPost/blog2';
 import Signup from './Component/register2/signup';
 import Profile from './Component/Profile/Profile';
 import AskQues from './Component/askques/askques';
@@ -41,13 +46,15 @@ function App() {
       </header>
 
       <Routes>
-          <Route path='/' element={<Welcome></Welcome>}/>
+          <Route path='/home' element={<HomePage/>}/>
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/login' element={<LogIn2/>}/>
-          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/login' element={<LogIn2/>}/>
+          <Route path='/profile' element={<Profile2/>}/>
           <Route path='/nav' element={<Nav/>}/>
-          <Route path='/blog' element={<Blog/>}/>
-          <Route path='/ques' element={<AskQues/>}/>
+          <Route path='/blogs' element={<Blog2/>}/>
+          <Route path='/questions' element={<AskQues2/>}/>
           <Route path='/showblogs' element={<Showb/>}/>
           <Route path="*" element={<p>There's nothing here: 404!</p>} />   
         

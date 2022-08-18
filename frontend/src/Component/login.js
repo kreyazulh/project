@@ -57,10 +57,12 @@ const Login = (props) => {
     const Join = styled.a`
       font-size: 16px;
       padding: 10px 12px;
-      text-decoration: none;
       border-radius: 4px;
       color: rgba(0, 0, 0, 0.6);
       margin-right: 12px;
+      a {
+        text-decoration: none;
+      }
       &:hover {
         background-color: rgba(0, 0, 0, 0.08);
         color: rgba(0, 0, 0, 0.9);
@@ -73,17 +75,21 @@ const Login = (props) => {
       color: #0a66c2;
       border-radius: 24px;
       transition-duration: 167ms;
-      text-decoration: none;
       font-size: 16px;
       font-weight: 600;
       line-height: 40px;
       padding: 10px 24px;
       text-align: center;
+      a {
+        text-decoration: none;
+      }
       background-color: rgba(0, 0, 0, 0);
       &:hover {
         background-color: rgba(112, 181, 249, 0.15);
         color: #0a66c2;
-        text-decoration: none;
+        a {
+          text-decoration: none;
+        }
       }
     `;
     
@@ -157,6 +163,7 @@ const Login = (props) => {
     const Google = styled.button`
       display: flex;
       justify-content: center;
+      border: 2px solid black;
       
       background-color: #eeddee;
       align-items: center;
