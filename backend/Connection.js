@@ -27,7 +27,7 @@ func.startup = async() =>
 func.execute = async (query , binds , options)=>
 {
     let result ; 
-    let conenction  ; 
+    let connection  ; 
     try{
         connection = await db.getConnection() ; 
         result = await connection.execute(query , binds , options) ; 
@@ -38,11 +38,11 @@ func.execute = async (query , binds , options)=>
     }
     finally
     {
-        if(conenction)
+        if(connection)
         {
             try
             {
-                await connection.close() ; 
+                await connection.close();
             }
             catch(err)
             {

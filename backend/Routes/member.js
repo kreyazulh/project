@@ -6,10 +6,10 @@ router.post('/signup' , async(req , res) =>
     try
     {
         console.log("in member signup") ; 
-        
-        const {NAME , PASSWORD , COUNTRY , EMAIL } = req.body ; 
-        
-        const result = await query.create( NAME , PASSWORD , COUNTRY , EMAIL) 
+       
+        const {NAME , PASSWORD , COUNTRY , EMAIL , IMAGE } = req.body ; 
+         console.log(NAME , PASSWORD , COUNTRY , EMAIL , IMAGE)
+        const result = await query.create( NAME , PASSWORD , COUNTRY , EMAIL , IMAGE ) 
        
         res.end() ; 
     }
