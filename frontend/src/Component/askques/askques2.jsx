@@ -86,7 +86,7 @@ const AskQues2 = () => {
         
 
     <ShareBox>
-      Share
+      
     
     <div>
       <img src="/images/user.svg" alt=""/>
@@ -94,42 +94,40 @@ const AskQues2 = () => {
         <span>
         <textarea name="QUES_CONTENT" id="area" cols="83" rows="2" placeholder='Ask your Question' onChange={handleChange} required></textarea>
           </span></button>
-          <input type="submit" value="Submit" width="50px" className='createpostBtn' onClick={handleSubmit} />
+          <br></br><br></br>
+ <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='Category' required/>
+
+          
     </div>
 
     <div>
-      <button>
-        <img src="/images/photos.svg" alt=""/>
-        <span>Photo</span>
-      </button>
       
+      <input type="submit" value="Submit" width="50px" className='createpostBtn' onClick={handleSubmit} />
     
 
     
-      <button>
-        <img src="/images/video.svg" alt=""/>
-        <span>Video</span>
-      </button>
+     
      
     
 
     
-      <button>
-        <img src="/images/questions (1).svg" alt=""/>
-        <span>Question</span>
-      </button>
       
     
 
     
-      <button>
-        <img src="/images/blog (1).svg" alt=""/>
-        <span>Article</span>
-      </button>
-      
+     
     </div> 
+<div></div>
+    
+
+
     </ShareBox>
     </Container>
+    <div>
+  <a href="/showquestions">
+<input type="submit" value="Show All Questions" width="50px" className='createpostBtn' />
+</a>
+</div>
     <Footer></Footer>
     </div>
     

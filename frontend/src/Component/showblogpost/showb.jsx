@@ -1,10 +1,12 @@
 import React from 'react';
-import { useContext } from 'react';
+import  { useContext, useState } from 'react';
 import { UserContext } from '../../App';
 //import NavBar from '../NavBar/NavBar';
 import './showb.css'
 
-const Showb =()=> {
+const Showb = ()=> 
+{
+
     const showbloghelp= async ()=>
     {
        let url = 'http://localhost:3000/showpost/showblogs' ; 
@@ -12,16 +14,22 @@ const Showb =()=> {
        {
         let result  = await fetch(url) ;
         return await result.json() ; 
+        //return result;
        }
        catch(error)
        {
         console.log(error) ; 
        }    
     }
-    const showallblogposts = async()=>
+   
+    const showallblogposts= async ()=>
     {
-        let blogs = await showbloghelp() ; 
-        console.log(blogs) ; 
+    let blogs = await showbloghelp() ; 
+    console.log(blogs) ; 
+    // let blogs = [] ; 
+    // for(let i in res) blogs.push([i , res[i]]) ; 
+    // console.log(blogs)
+        
         let html  = ' ' ; 
         blogs.forEach(blog => 
             {
@@ -39,34 +47,35 @@ const Showb =()=> {
             );
             let container = document.querySelector('.profile-info') ; 
             container.innerHTML = html ; 
-    }     
+            
+
+            }
     return (
-        <div>
-            <div className="profile-container">
-                <div className="profile-left">
-                </div>
-                <div className="profile-right">
-                    <div className="profile-right-header">
-                        <h1>BLOG POSTS</h1>
-                    </div>
-                    <div className="profile-info">
-                        
-                        
-                        
-                       <button className='topNavBtn' onClick={showallblogposts}>Show Blog Posts</button>
-                       
-                       
-                        
-                        <div>
-                            
-                        </div>
-                    </div>
-                </div>
+<div>
+    <div className="profile-container">
+        <div className="profile-left">
+        </div>
+        <div className="profile-right">
+            <div className="profile-right-header">
+                <h1>BLOG POSTS</h1>
+            </div>
+            <div className="profile-info">
+                
+            <button className='topNavBtn' onClick={showallblogposts}>Show Blog Posts</button>
+
+                
+                
+                
                 <div>
+                    
                 </div>
             </div>
-
         </div>
+        <div>
+        </div>
+    </div>
+
+</div>
     );
 };
 

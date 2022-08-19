@@ -95,13 +95,20 @@ const AskQues = () => {
                             
                             
                             <label htmlFor="QUES_CONTENT"><h3>Description</h3> </label>
-                            <textarea name="QUES_CONTENT" id="area" cols="100" rows="5" placeholder='Describe your blog post' onChange={handleChange} required></textarea>
-                            
+                            <textarea name="QUES_CONTENT" id="area" cols="100" rows="5" placeholder='Describe your Question' onChange={handleChange} required></textarea>
+                            <br></br><br></br>
+ <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='Category' required/>
                             <input type="submit" value="Submit" className='createpostBtn' onClick={handleSubmit} />
                         </form>
                     </div>
                 </div>
                 <div>
+                    <div></div>
+                    <div>
+  <a href="/showquestions">
+<input type="submit" value="Show All Questions" width="50px" className='createpostBtn' />
+</a>
+</div>
                   
                 </div>
             </div>

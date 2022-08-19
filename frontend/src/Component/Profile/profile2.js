@@ -19,8 +19,8 @@ const Profile2 = () => {
                 <div class="col-sm-4 bg-c-lite-green user-profile">
                     <div class="card-block text-center text-white">
                         
-                        <div className='profile-picture'>
-                        <img src={loggedInUser.IMAGE} onError="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="500" height="500"></img>
+                        <div >
+                        <img className='profile-picture' src={loggedInUser.IMAGE}  width="500" height="500"></img>
                         </div>
 
 

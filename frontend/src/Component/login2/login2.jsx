@@ -104,7 +104,7 @@ const LogIn2 = ({state}) => {
                         <small style={{color:'red'}}>{wrongUser}</small>
                         <br/><br/>
                         <input className="enterBtn"  type="submit" value="Log in" onClick={LogInUser}  /> <br></br>
-                    {/* {goForLogin && <input type="submit" value="Log In" onClick={LogInUser} className="orangeBtn" /> } */}
+                    {}
                         
                     </form>
                     <p className="link">

@@ -14,7 +14,6 @@ import Profile2 from './Component/Profile/profile2';
 import AskQues2 from './Component/askques/askques2';
 import Login from './Component/login';
 import LogIn2 from './Component/login2/login2';
-import Blog2 from './Component/BlogPost/blog2';
 import Signup from './Component/register2/signup';
 import Profile from './Component/Profile/Profile';
 import AskQues from './Component/askques/askques';
@@ -23,7 +22,8 @@ import AskQues from './Component/askques/askques';
 import {createContext, useState} from 'react';
 import Nav from './Component/Home/TopComp/Nav/Nav';
 import Blog from './Component/BlogPost/blog';
-import Showb from './Component/showblogpost/showb';
+import Showb from './Component/showblogpost/showb2';
+import Showq from './Component/showallques/showq';
 export const UserContext=createContext();
 
 function App() {
@@ -53,9 +53,10 @@ function App() {
           <Route path='/login' element={<LogIn2/>}/>
           <Route path='/profile' element={<Profile2/>}/>
           <Route path='/nav' element={<Nav/>}/>
-          <Route path='/blogs' element={<Blog2/>}/>
+          <Route path='/blogs' element={<Blog/>}/>
           <Route path='/questions' element={<AskQues2/>}/>
           <Route path='/showblogs' element={<Showb/>}/>
+          <Route path='/showquestions' element={<Showq/>}/>
           <Route path="*" element={<p>There's nothing here: 404!</p>} />   
         
         </Routes>

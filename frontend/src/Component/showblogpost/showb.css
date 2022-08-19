@@ -25,3 +25,43 @@
     text-align: justify;
     border: 2px solid black;
 }
+
+.blog-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #fafafa;
+  }
+  .blog-preview:hover {
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    background-color:floralwhite 
+ }
+ 
+ .blog-preview h1 {
+  font-size: 23px ;
+  font-family: 'Times New Roman', Times, serif;
+  color:red;
+  background-color: aquamarine;
+  margin-bottom: 10px;
+}
+  .blog-preview h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 8px;
+  }
+  .blog-preview h3 {
+    font-size: 10px;
+    color:red;
+    margin-bottom: 8px;
+  }
+  .blog-preview h4 {
+    font-size: 10px;
+    color:indigo;
+    margin-bottom: 8px;
+  }
+  .blog-preview p 
+  {
+    margin-top: 5px;
+    line-height: 1.6;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }

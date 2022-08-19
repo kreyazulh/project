@@ -105,12 +105,15 @@ p {
 }
 
 .f-w-600 {
+    font-size: 20px;
     font-weight: 800;
-    font: arial;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .m-b-20 {
     margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
 }
 
 .m-t-40 {
@@ -141,6 +144,6 @@ p {
 }
 .profile-picture
 {
-    border: 2px solid blueviolet;
+    border: 2px solid brown;
     margin: 3px;
 }

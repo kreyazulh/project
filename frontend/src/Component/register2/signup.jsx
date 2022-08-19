@@ -98,6 +98,8 @@ const Signup = () => {
                                 <br/><br/>
                                 <input className="input-field" onChange={handleChange} name="COUNTRY" type="text" placeholder="     Country" required/>
                                 <br/><br/>
+                                <input className="input-field" onChange={handleChange} name="IMAGE" type="text" placeholder="   post a link to your image" required/>
+                                <br/><br/>
                             
                             </div>
                              
