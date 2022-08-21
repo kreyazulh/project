@@ -1,5 +1,7 @@
+import ShowComments from "../showcomment/scomment";
+
 const BlogList = ({ blogs, title}) => {
-  console.log(typeof(blogs))
+  console.log("here")
   let nblog = Object.entries(blogs);
   console.log(nblog[1])
 
@@ -18,7 +20,10 @@ const BlogList = ({ blogs, title}) => {
             </center>
 
             <p>{ blog.BLOG_CONTENT }</p>
-
+            {console.log("error")}
+           {
+            <ShowComments blog_name = {blog.ID}></ShowComments>
+           } 
 
             
 

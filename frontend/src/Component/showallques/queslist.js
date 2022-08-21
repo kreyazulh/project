@@ -1,4 +1,5 @@
 
+import ShowAnswer from '../showanswers/show_ans';
 import './qlist.css'
 const Questionlist = ({ Questionlist, title}) => {
     console.log(typeof(Questionlist))
@@ -19,7 +20,9 @@ const Questionlist = ({ Questionlist, title}) => {
               <h4>Category : {Question.CATEGORY}</h4>
               
   
-              
+              {
+            <ShowAnswer Ques_id = {Question.ID}></ShowAnswer>
+           } 
   
               
   

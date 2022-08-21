@@ -47,17 +47,8 @@ const Showb = ()=>
             {
                 console.log("eroro")
             }
-         
-            
-       
-
-
-
-
-
-      
-        
-    })
+                
+    },[])
 return (
     <div>
         <div className="profile-container">
@@ -73,6 +64,8 @@ return (
                 
                     { blogs && < BlogList blogs={blogs} title="All Blogs"/>
                     } 
+
+                    
                     
                     
                     <div>

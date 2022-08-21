@@ -6,7 +6,9 @@ import './profile.css'
 
 const Profile2 = () => {
 
+   
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    
     return (
         
         <div class="page-content page-container" id="page-content">
@@ -48,12 +50,23 @@ const Profile2 = () => {
                         <div class="row">
                             <div class="col-sm-6">
                                 <p class="m-b-10 f-w-600">Questions</p>
+                                <div>
+    <a href="/personalquestions">
+    <input type="submit" value="Show My asked questions" width="50px" className='createpostBtn' />
+    </a>
+</div>
                                 <h6 class="text-muted f-w-400"></h6>
                                 <br/>
                             </div>
                             <div class="col-sm-6">
-                                <p class="m-b-10 f-w-600">Blogs</p>
+                                <p class="m-b-10 f-w-600">Posts</p>
+                                <div>
+    <a href="/personalposts">
+    <input type="submit" value="Show My Posted Blogs" width="50px" className='createpostBtn' />
+    </a>
+</div>
                                 <h6 class="text-muted f-w-400"></h6>
+                                <br/>
                             </div>
                         </div>
                         <ul class="social-link list-unstyled m-t-40 m-b-10">

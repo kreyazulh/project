@@ -1,6 +1,7 @@
 import './App.css';
 //import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './Component/Home/Home'
+
 import Home from './Component/Home/Home'
 import {
   BrowserRouter as Router,
@@ -19,11 +20,13 @@ import Profile from './Component/Profile/Profile';
 import AskQues from './Component/askques/askques';
 //import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
 //import Signup from './Component/register2/signup';
+import Showpersonalblog from './Component/showblogpost/personal';
 import {createContext, useState} from 'react';
 import Nav from './Component/Home/TopComp/Nav/Nav';
 import Blog from './Component/BlogPost/blog';
 import Showb from './Component/showblogpost/showb2';
 import Showq from './Component/showallques/showq';
+import ShowPersonalQues from './Component/showallques/personalq';
 export const UserContext=createContext();
 
 function App() {
@@ -57,6 +60,8 @@ function App() {
           <Route path='/questions' element={<AskQues2/>}/>
           <Route path='/showblogs' element={<Showb/>}/>
           <Route path='/showquestions' element={<Showq/>}/>
+          <Route path='/personalposts' element={<Showpersonalblog/>}></Route>
+          <Route path='/personalquestions' element={<ShowPersonalQues></ShowPersonalQues>}></Route>
           <Route path="*" element={<p>There's nothing here: 404!</p>} />   
         
         </Routes>

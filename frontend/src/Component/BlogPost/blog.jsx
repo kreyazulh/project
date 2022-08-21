@@ -113,6 +113,9 @@ const Blog = () => {
 <input type="submit" value="Show All Blogs" width="50px" className='createpostBtn' />
 </a>
 </div>
+
+
+
    
                 <div>
                   

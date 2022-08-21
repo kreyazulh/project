@@ -135,11 +135,11 @@ const Blog2 = () => {
     </div> 
     </ShareBox>
     <ShowPost>
-<div>
-  <a href="/showblogs">
-<input type="submit" value="Show All Blogs" width="50px" className='createpostBtn' />
-</a>
-</div>
+      
+
+
+
+
     </ShowPost>
     </Container>
     <Footer></Footer>

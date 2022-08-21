@@ -58,7 +58,7 @@ const Showq = ()=>
 
       
         
-    })
+    },[])
 return (
     <div>
         <div className="profile-container">
