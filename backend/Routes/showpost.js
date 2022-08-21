@@ -10,7 +10,7 @@ router.get('/showblogs', async(req,res)=>{
       
       const result = await query.showblogpost();
       
-      console.log("RESULT") 
+      //console.log("RESULT") 
       
       res.json(result);
       
@@ -27,7 +27,7 @@ router.get('/showquestions', async(req,res)=>{
     
     const result = await query.showquestions();
     
-    console.log("RESULT") 
+    //console.log("RESULT") 
    // console.log(result)
     
     res.json(result);
@@ -39,4 +39,85 @@ router.get('/showquestions', async(req,res)=>{
     console.log(err)
   }  
 })
+
+router.post('/showcomments', async(req,res)=>{
+  try{
+    console.log("line 45 in routes show comments ")
+    console.log(req.body) ; 
+    const  { blogId } = req.body ; 
+    const result = await query.showcomments(blogId) ; 
+    console.log("RESULT") 
+    //console.log(result)
+    
+    res.json(result);
+    
+   
+  
+  }
+  catch(err){
+    console.log(err)
+  }  
+})
+
+
+router.post('/showans', async(req,res)=>{
+  try{
+    console.log("line 65 in routes show answers ")
+    console.log(req.body) ; 
+    const  { Ques_id } = req.body ; 
+    const result = await query.showanswers(Ques_id) ; 
+    console.log("RESULT in routes line 69 for ans") 
+    //console.log(result)
+    
+    res.json(result);
+    
+   
+  
+  }
+  catch(err){
+    console.log(err)
+  }  
+})
+
+
+router.post('/personalposts', async(req,res)=>{
+  try{
+    console.log("line 85 in routes show personal posts ")
+    console.log(req.body) ; 
+    const  { userID } = req.body ; 
+    const result = await query.personalblog(userID) ; 
+    console.log("RESULT in routes line 89 for pblog") 
+    console.log(result)
+    
+    res.json(result);
+    
+   
+  
+  }
+  catch(err){
+    console.log(err)
+  }  
+})
+
+router.post('/personalquestions', async(req,res)=>{
+  try{
+    console.log("line 85 in routes show personal ques ")
+    console.log(req.body) ; 
+    const  { userID } = req.body ; 
+    const result = await query.personalQuestions(userID) ; 
+    console.log("RESULT in routes line 89 for pblog") 
+    console.log(result)
+    
+    res.json(result);
+    
+   
+  
+  }
+  catch(err){
+    console.log(err)
+  }  
+})
+
+
+
 module.exports = router
