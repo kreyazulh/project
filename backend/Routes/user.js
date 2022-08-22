@@ -5,7 +5,7 @@ const member = require('./member')
 const addblog = require('./addblog')
 const askques = require('./addques');
 const showpost = require('./showpost') ; 
-//const problemset = require('./problems') 
+const practice = require('./practiceques')
 
 
 //const answer = require('./answer') 
@@ -13,7 +13,7 @@ router.use('/member' , member) ;
 router.use('/addblog' , addblog) ;
 router.use('/addques',askques) 
 router.use('/showpost', showpost) ; 
-//router.use('/problems' , problemset) ; 
+router.use('/practiceques' , practice) ; 
 
 
 //router.use('/answer' , answer) ; 
