@@ -6,15 +6,15 @@ const handle = {}
 // add the type as a dropdown option maybe 
 //hardcode admin for it 
 
-handle.create = async(NAME , PASSWORD , COUNTRY , EMAIL) => 
+handle.create = async(NAME , PASSWORD , COUNTRY , EMAIL , IMAGE ) => 
 {
-    console.log(NAME , PASSWORD , COUNTRY , EMAIL) 
+    console.log(NAME , PASSWORD , COUNTRY , EMAIL , IMAGE ) 
     
-    const query = `INSERT INTO C##PROJECT.APP_USER (NAME , PASSWORD , COUNTRY , EMAIL )
-    VALUES (:NAME ,  :PASSWORD ,  :COUNTRY , :EMAIL )
+    const query = `INSERT INTO C##PROJECT.APP_USER (NAME , PASSWORD , COUNTRY , EMAIL , IMAGE )
+    VALUES (:NAME ,  :PASSWORD ,  :COUNTRY , :EMAIL , :IMAGE )
     `
 
-    const binds = {NAME , PASSWORD , COUNTRY , EMAIL}
+    const binds = {NAME , PASSWORD , COUNTRY , EMAIL , IMAGE }
 
     const result = (await con.execute(query , binds , con.options)).rows
    // console.log(result) ;

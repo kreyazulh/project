@@ -8,11 +8,11 @@ router.post('/ques', async(req,res)=>{
     try{
       console.log("line 9")
       console.log(req.body);
-      const {USER_ID , TIME , QUES_CONTENT} = req.body ; 
-      console.log(USER_ID , TIME ,  QUES_CONTENT);
+      const {USER_ID , TIME , QUES_CONTENT , CATEGORY} = req.body ; 
+      console.log(USER_ID , TIME ,  QUES_CONTENT , CATEGORY);
       const UPVOTES = Math.floor((Math.random() * 1000) + 1);
       //const T = SYSDATE()
-      const result = await query.addnewques(USER_ID , TIME ,  QUES_CONTENT, UPVOTES) ; 
+      const result = await query.addnewques(USER_ID , TIME ,  QUES_CONTENT, UPVOTES , CATEGORY) ; 
       res.end();
     
     }
