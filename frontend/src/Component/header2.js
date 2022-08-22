@@ -54,9 +54,9 @@ const Header2 = (props) => {
             </NavList>
 
             <NavList>
-              <a>
+              <a href = "\practice">
                 <img src="/images/quiz.svg" height="25px" alt="" />
-                <span>Quizzes</span>
+                <span>Practice Problem</span>
               </a>
             </NavList>
 

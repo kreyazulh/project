@@ -84,6 +84,7 @@ const Blog = () => {
         <div>
 
         </div>
+        <Header2></Header2>
         <div className='addPost-form'>
             <div className='post-head'>
                 <h2>Post a Blog </h2>
@@ -114,7 +115,7 @@ const Blog = () => {
 </a>
 </div>
 
-
+<Footer></Footer>
 
    
                 <div>
