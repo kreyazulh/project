@@ -11,7 +11,7 @@ handle.showblogpost = async(req , res , next) =>
     
     console.log("in register log showpost") 
     const query = `
-    SELECT U.NAME , P.ID , P.BLOG_TITLE , P.BLOG_CONTENT , to_char(P.TIME ,'YYYY-MM-DD HH24:MI:SS') AS TIME , P.CATEGORY FROM BLOG P JOIN APP_USER U ON P.USER_ID = U.ID  ORDER BY TIME DESC`
+    SELECT U.NAME , P.ID , P.BLOG_TITLE , P.BLOG_CONTENT , to_char(P.TIME ,'YYYY-MM-DD HH24:MI:SS') AS TIME , P.CATEGORY , P.UPVOTES FROM BLOG P JOIN APP_USER U ON P.USER_ID = U.ID  ORDER BY TIME DESC`
     const binds={}
     const result = (await con.execute(query , binds , con.options))
     return result ; 
@@ -98,4 +98,26 @@ handle.personalQuestions= async(userID ) =>
     //console.log(result.rows) ; 
     return result.rows ; 
 }
+
+
+handle.upvoteblog = async(BLOG_ID) => 
+{
+    
+    console.log("in register log upvote ") 
+    console.log(BLOG_ID)
+    const query = `
+    BEGIN
+     INC_UPVOTES(:BLOG_ID) ; 
+    END;
+    
+    `
+    
+    const binds={BLOG_ID}
+    const result = (await con.execute(query , binds , con.options))
+    return result ; 
+}
+
+
+
+
 module.exports = handle ;

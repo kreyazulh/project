@@ -60,4 +60,49 @@ handle.addnewques = async(USER_ID , TIME ,  QUES_CONTENT, UPVOTES,CATEGORY) =>
 
     //return result ; 
 }
+
+
+
+handle.addans=async(USER_ID , TIME ,QUESTION_ID, ANS_CONTENT,SUPPORT) =>
+{
+    console.log("in makepost , creating answer for ques no") ; 
+    console.log(USER_ID , TIME ,QUESTION_ID, ANS_CONTENT,SUPPORT) 
+    TIME = new Date(TIME) ; 
+   
+
+    const query = `INSERT INTO C##PROJECT.ANSWERS (USER_ID , QUESTION_ID, TIME ,  ANS_CONTENT, SUPPORT )
+    VALUES (:USER_ID ,:QUESTION_ID, :TIME ,  :ANS_CONTENT, :SUPPORT )
+    `
+    
+
+    const binds = {USER_ID , TIME ,QUESTION_ID, ANS_CONTENT,SUPPORT}
+
+    const result = (await con.execute(query , binds , con.options));
+   // console.log(result) ;
+
+    return result ; 
+}
+
+
+
+handle.addcomment=async(USER_ID , TIME ,BLOG_ID, COMMENTS) =>
+{
+    console.log("in makepost , creating comment for blogs ") ; 
+    console.log(USER_ID , TIME ,BLOG_ID, COMMENTS) 
+    TIME = new Date(TIME) ; 
+   
+
+    const query = `INSERT INTO C##PROJECT.COMMENTS (USER_ID , BLOG_ID ,COMMENTS, TIME  )
+    VALUES (:USER_ID ,:BLOG_ID , :COMMENTS , :TIME )
+    `
+    
+
+    const binds = {USER_ID , TIME ,BLOG_ID, COMMENTS}
+
+    const result = (await con.execute(query , binds , con.options));
+   // console.log(result) ;
+
+    return result ; 
+}
+
 module.exports = handle ;

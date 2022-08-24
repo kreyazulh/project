@@ -20,5 +20,21 @@ router.post('/blog', async(req,res)=>{
       console.log(err)
     }  
 })
-
+router.post('/addcom', async(req,res)=>{
+  try{
+    console.log("in add comments , add ques line 49")
+    console.log(req.body);
+    const {USER_ID , TIME ,BLOG_ID, COMMENTS} = req.body ; 
+    console.log(USER_ID , TIME ,BLOG_ID, COMMENTS);
+   
+    const result = await query.addcomment(USER_ID , TIME ,BLOG_ID, COMMENTS) ;
+    console.log("in line 55 add comments ")
+    console.log(result) ; 
+    res.end();
+  
+  }
+  catch(err){
+    console.log(err)
+  }  
+})
 module.exports = router
