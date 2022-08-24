@@ -1,0 +1,15 @@
+.profile-info
+{
+    background-color: aquamarine;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:bold;
+}
+.profile-info:hover
+{
+    background-color: white;
+    font-style: italic;
+}
+.profile-container 
+{
+    background-color: beige;
+}

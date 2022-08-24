@@ -91,31 +91,33 @@ const Signup = () => {
                <h1></h1>
                <form action="">
                             
-                            <input className="input-field" onChange={handleChange} name="EMAIL" type="text" placeholder="Email" required/>
-                            <hr></hr>
+                            <input className="input-field" onChange={handleChange} name="EMAIL" type="text" placeholder="   Email" required/>
+                            <br/><br/>
                             <div className='fullNameContainer'>
-                                <input className="input-field" onChange={handleChange} name="NAME" type="text" placeholder="First Name" required/>
-                                <hr></hr>
-                                <input className="input-field" onChange={handleChange} name="COUNTRY" type="text" placeholder="Country" required/>
-                                <hr></hr>
+                                <input className="input-field" onChange={handleChange} name="NAME" type="text" placeholder="    First Name" required/>
+                                <br/><br/>
+                                <input className="input-field" onChange={handleChange} name="COUNTRY" type="text" placeholder="     Country" required/>
+                                <br/><br/>
+                                <input className="input-field" onChange={handleChange} name="IMAGE" type="text" placeholder="   post a link to your image" required/>
+                                <br/><br/>
                             
                             </div>
                              
                             <div className='passwordContainer'>
                                 <div>
                                     
-                                    <input className="input-field" type="password" onChange={handleChange} name="PASSWORD" placeholder="Password"required />
+                                    <input className="input-field" type="password" onChange={handleChange} name="PASSWORD" placeholder="    Password"required />
                                     
-                                    <hr></hr>
+                                    <br/><br/>
                                     <small style={{color:'red'}}>{aboutPassword}</small>
                                 </div>
                                 <div>
-                                    <input className="input-field" onChange={handleChange}  name="confirmPass" type="password" placeholder="Confirm Passsword" required />
-                                    <hr></hr>
+                                    <input className="input-field" onChange={handleChange}  name="confirmPass" type="password" placeholder="    Confirm Passsword" required />
+                                    <br/><br/>
                                     <small style={{color:'red'}}>{passConfirmation}</small>
                                 </div>
                             </div>
-                            <hr></hr>
+                            <br/><br/>
                             <input type="submit" value="Create Account" onClick={CreateUser} className="createBtn" /> 
                             
                

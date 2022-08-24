@@ -73,10 +73,11 @@ const LogIn2 = ({state}) => {
                 setLoggedInUser(data[0]);
                 console.log(data);
                 window.localStorage.setItem("token",JSON.stringify(data[0]))
-                
+                if(data[0].Admin == 1)
+                    console.log('Welcome Admin')
                 //console.log(state) ; 
                 
-                navigate(location?.state?.from || '/nav', {replace:true})
+                navigate(location?.state?.from || '/home', {replace:true})
             }
    
         } catch (error) {
@@ -98,13 +99,13 @@ const LogIn2 = ({state}) => {
              </div>
              <div className="form-login" style={{border:'0'}}>
                     <form>
-                        <input className="login-input-field" onChange={handleChange} name="EMAIL" type="text" placeholder="email" required/>
-                        <hr></hr>
-                        <input className="login-input-field" type="password" onChange={handleChange} name="PASSWORD" placeholder="Password"required />
+                        <input className="login-input-field" onChange={handleChange} name="EMAIL" type="text" placeholder="     email" required/>
+                        <br/><br/>
+                        <input className="login-input-field" type="password" onChange={handleChange} name="PASSWORD" placeholder="      Password"required />
                         <small style={{color:'red'}}>{wrongUser}</small>
-                        <hr></hr>
+                        <br/><br/>
                         <input className="enterBtn"  type="submit" value="Log in" onClick={LogInUser}  /> <br></br>
-                    {/* {goForLogin && <input type="submit" value="Log In" onClick={LogInUser} className="orangeBtn" /> } */}
+                    {}
                         
                     </form>
                     <p className="link">

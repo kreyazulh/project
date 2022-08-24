@@ -3,27 +3,32 @@ import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useLocation, useNavigate } from 'react-router-dom';
 //import NavBar from '../NavBar/NavBar';
-import './askques.css'
+import './addans.css'
+import Header2 from '../header2';
+import Footer from '../Footer/Footer';
 
-const AskQues = () => {
+const AddAns = ({Ques_id}) => {
 
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
-    const [addques , setAddQues] = useState([]) ; 
+    const [addans , setaddans] = useState([]) ; 
     let navigate = useNavigate() ; 
     let location = useLocation() ; 
 
     useEffect(
 ()=>
 {
-    const newly_added_ques = {...addques}
-    newly_added_ques['USER_ID'] = loggedInUser?.ID ; 
+    const x = {...addans}
+    x['USER_ID'] = loggedInUser?.ID ; 
     let dateString = Date();
    // newly_added_post['TIME'] = new Date(dateString).toISOString()
-   newly_added_ques['TIME'] = dateString.toLocaleString() ;
+   x['TIME'] = dateString.toLocaleString() ;
+   x['QUESTION_ID'] = Ques_id ; 
+  
     console.log("IN USE-EFFECT")
     
-    setAddQues(newly_added_ques)
-    console.log(addques)
+    setaddans(x)
+    console.log(addans)
+   
 } , []
 
 
@@ -33,11 +38,13 @@ const AskQues = () => {
     const handleChange = (event)=>
     {
         console.log(event.target.name , event.target.value) ; 
-        const newly_added_ques={...addques}
-        newly_added_ques[event.target.name] = event.target.value ; 
-        setAddQues(newly_added_ques)
+        const x={...addans}
+        x[event.target.name] = event.target.value ; 
+        setaddans(x)
         console.log("handle change")
-        console.log(addques)
+        console.log(addans)
+
+       
 
 
     }
@@ -46,74 +53,69 @@ const AskQues = () => {
     const handleSubmit= (event)=>
     {
         event.preventDefault();
-        console.log(addques) ; 
+        console.log(addans) ; 
         try {
-            console.log("sending to addques ques") ;
-            fetch('http://localhost:3000/addques/ques', {
+            console.log("sending to add answer from backend") ;
+            fetch('http://localhost:3000/addques/addsolve', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(addques)
+            body: JSON.stringify(addans)
             })
             .then((res)=>{
                 res.json()
-                console.log('hello');
+               
             })
             .then(data=>{
+                console.log('showing data in addans frontend')
                 console.log(data)
-                console.log('hello2')
-                navigate(location?.state?.from || '/nav', {replace:true})
+                window.location.reload(false);
+               // navigate(location?.state?.from || '/showquestions', {replace:true})
              
             })
         } catch (error) {
             console.log(error);
         }
          
+        
     }
 
-//add option to create specific category 
+
 
 
     return (
         <div>
             
+            
             <div className='addPost-container'>
-                <div>
-
-                </div>
+                
                 <div className='addPost-form'>
-                    <div className='post-head'>
-                        <h2>Ask a question</h2>
-                        <hr />
-                    </div>
+                    
 
                     <div className='form'>
                         
                         <form action="" className='addPost-form'>
                             
                             
-                            <label htmlFor="QUES_CONTENT"><h3>Description</h3> </label>
-                            <textarea name="QUES_CONTENT" id="area" cols="100" rows="5" placeholder='Describe your Question' onChange={handleChange} required></textarea>
+                           
+                            <textarea name="ANS_CONTENT" id="area" cols="100" rows="5" placeholder='Add answer' onChange={handleChange} required></textarea>
                             <br></br><br></br>
- <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='Category' required/>
                             <input type="submit" value="Submit" className='createpostBtn' onClick={handleSubmit} />
                         </form>
                     </div>
                 </div>
                 <div>
                     <div></div>
-                    <div>
-  <a href="/showquestions">
-<input type="submit" value="Show All Questions" width="50px" className='createpostBtn' />
-</a>
-</div>
+                    
                   
                 </div>
             </div>
+           
         </div>
+
     );
 };
 
-export default AskQues;
+export default AddAns;

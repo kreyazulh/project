@@ -32,16 +32,24 @@
     border-bottom: 1px solid #fafafa;
   }
   .blog-preview:hover {
+    color: black ; 
+    font-size: 20px;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-    background-color:floralwhite 
+    background-color:chartreuse
  }
  
- .blog-preview h1 {
-  font-size: 23px ;
-  font-family: 'Times New Roman', Times, serif;
+ .blog-preview h3 {
+  font-size: 15px ;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; 
   color:red;
   background-color: aquamarine;
   margin-bottom: 10px;
+}
+.blog-preview h3:hover {
+  color: black ; 
+    font-size: 20px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    background-color:chartreuse
 }
   .blog-preview h2 {
     font-size: 20px;

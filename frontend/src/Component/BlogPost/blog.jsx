@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useLocation, useNavigate } from 'react-router-dom';
-//import NavBar from '../NavBar/NavBar';
-import './blog.css'
+import styled from "styled-components";
+import Header2 from '../header2';
+import Footer from '../Footer/Footer';
 
 const Blog = () => {
 
@@ -20,6 +21,7 @@ const Blog = () => {
     let dateString = Date();
    // newly_added_post['TIME'] = new Date(dateString).toISOString()
    newly_added_post['TIME'] = dateString.toLocaleString() ;
+  
     console.log("IN USE-EFFECT")
     
     setAddBlog(newly_added_post)
@@ -64,7 +66,7 @@ const Blog = () => {
             .then(data=>{
                 console.log(data)
                 console.log('hello2')
-                navigate(location?.state?.from || '/nav', {replace:true})
+                navigate(location?.state?.from || '/home', {replace:true})
              
             })
         } catch (error) {
@@ -73,35 +75,49 @@ const Blog = () => {
          
     }
 
-//add option to create specific category 
 
 
     return (
+<div>
+    
+    <div className='addPost-container'>
         <div>
-            
-            <div className='addPost-container'>
-                <div>
 
-                </div>
-                <div className='addPost-form'>
-                    <div className='post-head'>
-                        <h2>Post a Blog </h2>
-                        <hr />
-                    </div>
+        </div>
+        <Header2></Header2>
+        <div className='addPost-form'>
+            <div className='post-head'>
+                <h2>Post a Blog </h2>
+                <hr />
+            </div>
 
-                    <div className='form'>
-                        
-                        <form action="" className='addPost-form'>
-                            <label htmlFor="BLOG_TITLE"><h3>Title</h3> </label>
-                            <input type="text" name="BLOG_TITLE" id="BLOG_TITLE" onChange={handleChange}  placeholder='Enter Title' required/>
-                            
-                            <label htmlFor="BLOG_CONTENT"><h3>Description</h3> </label>
-                            <textarea name="BLOG_CONTENT" id="area" cols="100" rows="5" placeholder='Describe your blog post' onChange={handleChange} required></textarea>
-                            
-                            <input type="submit" value="Submit" className='createpostBtn' onClick={handleSubmit} />
-                        </form>
-                    </div>
-                </div>
+            <div className='form'>
+                
+                <form action="" className='addPost-form'>
+                    <label htmlFor="BLOG_TITLE"><h3>Title</h3> </label>
+                    <input type="text" name="BLOG_TITLE" id="BLOG_TITLE" onChange={handleChange}  placeholder='Enter Title' required/>
+                    
+                    <label htmlFor="BLOG_CONTENT"><h3>Description</h3> </label>
+                    <textarea name="BLOG_CONTENT" id="area" cols="100" rows="5" placeholder='Describe your blog post' onChange={handleChange} required></textarea>
+                    
+                    <label htmlFor="CATEGORY"><h3>Category</h3> </label>
+                    <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='Enter Your Blog Category' required/>
+
+
+                    <input type="submit" value="Submit" className='createpostBtn' onClick={handleSubmit} />
+                </form>
+            </div>
+        </div>
+      <br></br> <div></div>
+<div>
+  <a href="/showblogs">
+<input type="submit" value="Show All Blogs" width="50px" className='createpostBtn' />
+</a>
+</div>
+
+<Footer></Footer>
+
+   
                 <div>
                   
                 </div>
@@ -109,5 +125,6 @@ const Blog = () => {
         </div>
     );
 };
+
 
 export default Blog;

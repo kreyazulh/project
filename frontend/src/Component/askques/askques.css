@@ -58,3 +58,9 @@ label{
     margin: 15px;
     height: 45px;
 }
+#CATEGORY
+{
+    display: block;
+    background-color: white;
+    color: black;
+}
