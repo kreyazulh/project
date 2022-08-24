@@ -35,4 +35,49 @@ handle.verify = async(email , password)=>
 
 
 
+handle.getuser = async(ID)=>
+{
+    const query = `SELECT * FROM C##PROJECT.APP_USER WHERE ID = :ID `
+    console.log("here in create GETUSER")
+    console.log(ID)  ; 
+    const binds = {ID:ID } 
+    const result = (await con.execute(query , binds , con.options)).rows
+    console.log(result) ; 
+    return result ; 
+}
+
+handle.update = async(NAME , PASSWORD , COUNTRY , EMAIL , IMAGE , ID ) => 
+{
+    console.log(NAME , PASSWORD , COUNTRY , EMAIL , IMAGE, ID  ) 
+   
+    const query = ` UPDATE APP_USER
+    SET NAME = :NAME , PASSWORD= :PASSWORD , EMAIL = :EMAIL , IMAGE= :IMAGE , COUNTRY = :COUNTRY 
+    WHERE ID = :ID
+    `
+
+    const binds = {NAME , PASSWORD , COUNTRY , EMAIL , IMAGE , ID  }
+
+    const result = (await con.execute(query , binds , con.options)).rows
+   // console.log(result) ;
+
+    return result ; 
+}
+
+
+handle.delete = async(ID ) => 
+{
+    console.log(ID) 
+   
+    const query = `  DELETE FROM APP_USER 
+    WHERE ID = :ID
+    `
+
+    const binds = {ID}
+
+    const result = (await con.execute(query , binds , con.options)).rows
+   // console.log(result) ;
+
+    return result ; 
+}
+
 module.exports = handle ; 
