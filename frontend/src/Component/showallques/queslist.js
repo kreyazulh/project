@@ -1,5 +1,6 @@
 import AddAns from '../showanswers/addans';
 import ShowAnswer from '../showanswers/show_ans';
+import { Link} from 'react-router-dom';
 import './qlist.css'
 const Questionlist = ({ Questionlist, title}) => {
     console.log(typeof(Questionlist))
@@ -15,7 +16,9 @@ const Questionlist = ({ Questionlist, title}) => {
           <div className="blog-preview"  >
            
               <h1>{ Question.QUES_CONTENT }</h1>
-              <h3>Asked by {Question.NAME}</h3>
+              <h3>Asked by 
+              <Link to={'user/'+Question.ID_1 } >
+                {Question.NAME}</Link></h3>
               <h4>TIME : {Question.TIME}</h4>
               <h4>Category : {Question.CATEGORY}</h4>
               

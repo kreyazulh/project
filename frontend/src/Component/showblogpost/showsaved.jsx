@@ -2,39 +2,30 @@ import React, { useEffect } from 'react';
 import  { useContext, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../App';
-import PersonalQuesList from './personalques';
+import PersonalBlogList from './showpersonal';
 //import NavBar from '../NavBar/NavBar';
 import './personal.css'
 
 
-const ShowPersonalQues = ({DEF})=> 
+const ShowSaved = ()=> 
 {
-    console.log(DEF);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [ Questions,setQuestions] = useState(null);
-    let title = '' ; 
-
+    const [blogs,setPosts] = useState(null);
     let navigate = useNavigate() ; 
     let location  = useLocation() ; 
     const[userinfo , setuserinfo] = useState({})
-    let a =0;
-    if(DEF==0)
-        {
-             a = loggedInUser.ID ; 
-             title="My Questions"
-            
-        }
-    else { a=DEF ; title="User's Questions" }
+
+  const a = loggedInUser.ID ; 
 
     useEffect( ()=>
     {
         const need = async()=>
         {
-           
+            console.log("try strart")
             try {
         
                    userinfo['userID'] = a ; 
-                const res = await fetch('http://localhost:3000/showpost/personalquestions',  {
+                    const res = await fetch('http://localhost:3000/showpost/getsaved',  {
                     method: 'POST',
                   
                     
@@ -47,14 +38,14 @@ const ShowPersonalQues = ({DEF})=>
                 } )
                 
                 const data = await res.json()  
-                
+                console.log("here data")
                 console.log(data)
                 if(data.length === 0){
                 
                 }
                 else{
                     //console.log(data[0]) ; 
-                    setQuestions(data)
+                    setPosts(data)
                     //console.log(data);
                     
                     
@@ -77,17 +68,13 @@ return (
             </div>
             <div className="profile-right">
                 <div className="profile-right-header">
-                    <h1>ASKED QUESTIONS</h1>
+                    <h1>BLOG POSTS</h1>
                 </div>
                 <div className="profile-info">
                     
-              
                 
-                    { 
-                    
-                         Questions && < PersonalQuesList questions={Questions} title={title}/>
-                    
-                   
+                
+                    { blogs && < PersonalBlogList blogs={blogs} title="My blogs"/>
                     } 
 
                     
@@ -106,4 +93,4 @@ return (
         );
     };
     
-    export default ShowPersonalQues;
+    export default ShowSaved;

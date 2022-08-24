@@ -20,28 +20,28 @@ const Submit =()=>
     const [im , setimage] = useState({}) 
     const parse = require('html-react-parser')
 
-useEffect(()=>
-{
-    const getques= async()=>
+    useEffect(()=>
     {
-        
-        console.log(ID.id)
-        const res = await fetch ('http://localhost:3000/practiceques/problem/'+ID.id);
-        const data = await res.json() ; 
-        console.log("in data")
-        console.log(data.rows) ;
-        console.log(data.rows[0]) 
-        setProb(data.rows[0]) ; 
-        setSol(data.rows[0].Discussion)
-        setString(data.rows[0].DESCRIPTION) ; 
-        setimage(data.rows[0].IMG) ;
-        console.log(string) ; 
-    }
-
-    try{getques();}
-    catch(error){console.log(error)} 
-
-},[])
+        const getques= async()=>
+        {
+            
+            console.log(ID.id)
+            const res = await fetch ('http://localhost:3000/practiceques/problem/'+ID.id);
+            const data = await res.json() ; 
+            console.log("in data")
+            console.log(data.rows) ;
+            console.log(data.rows[0]) 
+            setProb(data.rows[0]) ; 
+            setSol(data.rows[0].Discussion)
+            setString(data.rows[0].DESCRIPTION) ; 
+            setimage(data.rows[0].IMG) ;
+            console.log(string) ; 
+        }
+    
+        try{getques();}
+        catch(error){console.log(error)} 
+    
+    },[])
 const handlechange = async(event) =>
 {
     console.log(event.target.name, event.target.value)

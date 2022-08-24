@@ -28,7 +28,10 @@ import Showb from './Component/showblogpost/showb2';
 import Showq from './Component/showallques/showq';
 import ShowPersonalQues from './Component/showallques/personalq';
 import PracticeSet from './Component/PracticeSet/PracticeSet';
+import ShowSaved from './Component/showblogpost/showsaved';
 import Submit from './Component/Submit/submit';
+import Update from './Component/Profile/Update';
+import Otheruser from './Component/Profile/otheruser';
 export const UserContext=createContext();
 
 function App() {
@@ -62,10 +65,18 @@ function App() {
           <Route path='/questions' element={<AskQues2/>}/>
           <Route path='/showblogs' element={<Showb/>}/>
           <Route path='/showquestions' element={<Showq/>}/>
-          <Route path='/personalposts' element={<Showpersonalblog/>}></Route>
-          <Route path='/personalquestions' element={<ShowPersonalQues></ShowPersonalQues>}></Route>
+          <Route path='/personalposts' element={<Showpersonalblog DEF = {0}/>}></Route>
+          <Route path='/personalquestions' element={<ShowPersonalQues DEF = {0}></ShowPersonalQues>}></Route>
+          
+
+
           <Route path='/practice' element ={<PracticeSet></PracticeSet>}></Route>
           <Route path='/practice/problem/:id' element={<Submit></Submit>}/>
+          <Route path='/savedposts' element={<ShowSaved></ShowSaved>}/>
+          <Route path='showblogs/user/:id' element={<Otheruser></Otheruser>}/>
+          <Route path='showquestions/user/:id' element={<Otheruser></Otheruser>}/>
+          <Route path='/updateinfo' element={<Update></Update>}/>
+          
           <Route path="*" element={<p>There's nothing here: 404!</p>} />   
         
         </Routes>

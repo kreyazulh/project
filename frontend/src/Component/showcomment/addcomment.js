@@ -22,10 +22,10 @@ const AddComment = ({blog_id}) => {
    x['TIME'] = dateString.toLocaleString() ;
    x['BLOG_ID'] = blog_id ; 
   
-    console.log("IN USE-EFFECT")
+    //console.log("IN USE-EFFECT")
     
     setAddComment(x)
-    console.log(addcomment)
+    //console.log(addcomment)
    
 } , []
 
