@@ -1,19 +1,19 @@
 
 .blog-preview {
     padding: 10px 16px;
-    margin: 20px 0;
+    margin: 20px 20px;
     border-bottom: 1px solid #fafafa;
   }
   .blog-preview:hover {
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-    background-color:rgb(222, 192, 131) 
+    background-color:rgb(253, 253, 253) 
  }
  
  .blog-preview h1 {
   font-size: 23px ;
   font-family: 'Times New Roman', Times, serif;
-  color:red;
-  background-color: rgb(246, 255, 127);
+  color:rgb(82, 52, 252);
+  background-color: rgb(127, 214, 255);
   margin-bottom: 10px;
 }
   .blog-preview h2 {

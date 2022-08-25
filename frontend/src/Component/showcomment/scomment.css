@@ -14,9 +14,19 @@ background-color: rgb(255, 255, 255);
 border-radius: 5px;
 border: none;
 
-
-
 }
+
+#commentbox{
+  color:#1a0202;
+}
+
+#comment{
+  color:#1a0202;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-large;
+  background-color: #fafafa;
+}
+
 #left{
   border: 0;
   background-color: #fff;
@@ -38,6 +48,13 @@ border: none;
 
 #profile{
 width:99.7%;
+background-color: #fafafa;
+color:#1a0202;
+border: none;
+}
+
+#commentlist{
+  color: #1a0202;
 }
 
 
@@ -109,7 +126,7 @@ padding-top: 170px;
 font-size: 23px ;
 font-family: 'Times New Roman', Times, serif;
 color:red;
-background-color: aquamarine;
+background-color: rgb(51, 27, 155);
 margin-bottom: 10px;
 }
 .blog-preview h2 {

@@ -69,7 +69,7 @@ const PracticeSet=()=>
             
             <div className='problem-container'>
                 
-                <div className='problem-show'>
+                <div className='problem-show' id='problem'>
                     {
                          
                          

@@ -89,20 +89,20 @@ const AskQues2 = () => {
       
     
     <div>
-      <img src="/images/user.svg" alt=""/>
+      <img src={loggedInUser.IMAGE} alt=""/>
       <button>
         <span>
         <textarea name="QUES_CONTENT" id="area" cols="83" rows="2" placeholder='Ask your Question' onChange={handleChange} required></textarea>
           </span></button>
           <br></br><br></br>
- <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='Category' required/>
+ <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='  Category' required/>
 
           
     </div>
 
     <div>
       
-      <input type="submit" value="Submit" width="50px" className='createpostBtn' onClick={handleSubmit} />
+      <input type="submit" value="Submit" width="50px" className='createpostBtn'  onClick={handleSubmit} />
     
 
     
@@ -125,9 +125,13 @@ const AskQues2 = () => {
     </Container>
     <div>
   <a href="/showquestions">
-<input type="submit" value="Show All Questions" width="50px" className='createpostBtn' />
+<input type="submit" id='buttonn' value="Show All Questions"   />
 </a>
 </div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
     <Footer></Footer>
     </div>
     
@@ -211,7 +215,8 @@ const AskQues2 = () => {
     padding: 8px 16px 0px 10px;
     img
     {
-      height: 48px;
+      height: 45px;
+      width: 45px;
       border-radius: 50%;
       margin-right: 8px;
   

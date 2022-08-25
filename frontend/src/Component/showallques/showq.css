@@ -1,15 +1,25 @@
 .addPost-container{
     display: grid;
-    grid-template-columns: 20% auto 20%;
-    border: 3px solid black;
+    margin: 20px;
+
     
 }
 .addPost-form{
-    border: 1px solid black;
+
     margin: 20px;
     
     
 }
+#container{
+    background: transparent;
+    background-color: rgb(249, 249, 250);
+    border-radius: 5px;
+    border: none;
+    margin: 100px;
+    
+  
+  
+  }
 
 .form{
     border: 3px solid black;

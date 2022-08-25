@@ -64,3 +64,21 @@ label{
     background-color: white;
     color: black;
 }
+
+#buttonn {
+    background-color:rgb(30, 5, 121);
+    color: rgb(231, 240, 241);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 510px;
+    width: 30%;
+    text-decoration: none;
+
+    align-items: center;
+
+    
+}

@@ -106,7 +106,7 @@ const AskQues = () => {
                     <div></div>
                     <div>
   <a href="/showquestions">
-<input type="submit" value="Show All Questions" width="50px" className='createpostBtn' />
+<input type="submit" value="Show All Questions" width="50px" className='createpostBtn' id='button2' />
 </a>
 </div>
                   

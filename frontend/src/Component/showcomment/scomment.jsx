@@ -76,7 +76,7 @@ return (
                     
                 
                 
-                    { comments && < Commentlist comment={comments} title="All comments"/>
+                    { comments && < Commentlist comment={comments} />
                     } 
                     
                     

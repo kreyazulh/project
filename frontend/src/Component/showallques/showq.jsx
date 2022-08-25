@@ -63,7 +63,7 @@ const Showq = ()=>
 return (
     <div>
         <Header2></Header2>
-        <div className="profile-container">
+        <div className="profile-container" id='container'>
             <div className="profile-left">
             </div>
             <div className="profile-right">

@@ -57,8 +57,7 @@ return (
     <div>
         <div className="profile-container" id="container">
             <Header2/>
-            <div className="profile-left" id='left'>
-            </div>
+            
             <div className="profile-right" id='right'>
                 <div className="profile-right-header" id='header'>
                     <h1>BLOG POSTS</h1>
