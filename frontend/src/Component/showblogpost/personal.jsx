@@ -7,15 +7,20 @@ import PersonalBlogList from './showpersonal';
 import './personal.css'
 
 
-const Showpersonalblog = ()=> 
+const Showpersonalblog = ({DEF})=> 
 {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [blogs,setPosts] = useState(null);
     let navigate = useNavigate() ; 
     let location  = useLocation() ; 
     const[userinfo , setuserinfo] = useState({})
-
-  const a = loggedInUser.ID ; 
+    let title = '' ; 
+    let a =0;
+    if(DEF==0)
+        {
+             a = loggedInUser.ID ; title="My Blogs"
+        }
+    else { a=DEF ;title="User's Blogs" } 
 
     useEffect( ()=>
     {
@@ -74,7 +79,7 @@ return (
                     
                 
                 
-                    { blogs && < PersonalBlogList blogs={blogs} title="My blogs"/>
+                    { blogs && < PersonalBlogList blogs={blogs}  title={title}/>
                     } 
 
                     

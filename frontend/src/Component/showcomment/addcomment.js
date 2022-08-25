@@ -22,10 +22,10 @@ const AddComment = ({blog_id}) => {
    x['TIME'] = dateString.toLocaleString() ;
    x['BLOG_ID'] = blog_id ; 
   
-    console.log("IN USE-EFFECT")
+    //console.log("IN USE-EFFECT")
     
     setAddComment(x)
-    console.log(addcomment)
+    //console.log(addcomment)
    
 } , []
 
@@ -85,12 +85,11 @@ const AddComment = ({blog_id}) => {
     return (
         <div>
             
-            <div className='addPost-container'>
+            <div className='addPost-container' id='container'>
                 
                 <div className='addPost-form'>
                     
-
-                    <div className='form'>
+                    <div className='form' id='form'>
                         
                         <form action="" className='addPost-form'>
                             
@@ -98,7 +97,7 @@ const AddComment = ({blog_id}) => {
                            
                             <textarea name="COMMENTS" id="area" cols="100" rows="5" placeholder='Add Comment' onChange={handleChange} required></textarea>
                             <br></br><br></br>
-                            <input type="submit" value="Submit" className='createpostBtn' onClick={handleSubmit} />
+                            <input type="submit" value="Submit" className='createpostBtn' id='button' onClick={handleSubmit} />
                         </form>
                     </div>
                 </div>

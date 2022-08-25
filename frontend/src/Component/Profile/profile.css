@@ -2,9 +2,51 @@ body {
     background-color: #f9f9fa
 }
 
-.padding {
-    padding: 3rem !important
+#page-content{
+    padding-top: 40px;
 }
+.danger
+{
+    background-color: red;
+}
+
+#profilepicture{
+    align-self: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    align-content: center;
+    margin-left: 480px;
+    height: 350px;
+    width: 350px;
+
+}
+
+#name{
+    text-align: center;
+    font-size: xx-large;
+    color: #0d0941;
+}
+
+#student{
+    text-align: center;
+}
+
+#info{
+    font-size: x-large;
+}
+
+#mail{
+    font-size: medium;
+    color:#0d0941;
+}
+
+#country{
+    font-size: medium;
+    color:#2d24ac;
+    text-transform: capitalize;
+}
+
 
 .user-card-full {
     overflow: hidden;
@@ -77,7 +119,7 @@ p {
 }
 
 .b-b-default {
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #b13737;
 }
 
 .m-b-20 {
@@ -97,7 +139,7 @@ p {
 }
 
 .text-muted {
-    color: #919aa3 !important;
+    color: #2b7bca !important;
 }
 
 .b-b-default {

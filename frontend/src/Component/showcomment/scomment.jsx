@@ -65,14 +65,14 @@ const ShowComments = ({blog_name})=>
     } , [])
 return (
     <div>
-        <div className="profile-container">
-            <div className="profile-left">
+        <div className="profile-container" id='container'>
+            <div className="profile-left" id='left'>
             </div>
-            <div className="profile-right">
-                <div className="profile-right-header">
+            <div className="profile-right" id='right'>
+                <div className="profile-right-header" id='header'>
                     <h1>comments</h1>
                 </div>
-                <div className="profile-info">
+                <div className="profile-info" id='profile'>
                     
                 
                 

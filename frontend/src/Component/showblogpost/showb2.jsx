@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import  { useContext, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../App';
-import Footer from '../Footer/Footer';
-import Header2 from '../header2';
 import BlogList from './bloglist';
+import './showb.css';
+import Header2 from '../header2';
+
+
 //import NavBar from '../NavBar/NavBar';
-import './showb.css'
+
 
 
 const Showb = ()=> 
@@ -47,22 +49,21 @@ const Showb = ()=>
             }
             catch
             {
-                console.log("eroro")
+                console.log("error")
             }
                 
     },[])
 return (
-    
     <div>
-        <Header2></Header2>
-        <div className="profile-container">
-            <div className="profile-left">
+        <div className="profile-container" id="container">
+            <Header2/>
+            <div className="profile-left" id='left'>
             </div>
-            <div className="profile-right">
-                <div className="profile-right-header">
+            <div className="profile-right" id='right'>
+                <div className="profile-right-header" id='header'>
                     <h1>BLOG POSTS</h1>
                 </div>
-                <div className="profile-info">
+                <div className="profile-info" id='profile'>
                     
                 
                 
@@ -80,7 +81,7 @@ return (
             <div>
             </div>
         </div>
-
+    
     </div>
         );
     };

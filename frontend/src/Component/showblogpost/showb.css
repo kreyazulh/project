@@ -1,16 +1,87 @@
 .profile-container{
-    display: grid;
+    display: none;
     
     margin: 15px;
+
     
-    height: 510px;
+
     
 }
+#container{
+  background: transparent;
+  background-color: rgb(249, 249, 250);
+  border-radius: 5px;
+  border: none;
+  
+
+
+}
+#left{
+    border: 0;
+    background-color: #fff;
+    border: none;
+    
+}
+#right{
+    background-color: rgb(226, 231, 235);
+    border: none;
+    border-radius: 5px;
+    padding: 70px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.301);
+    
+}
+
+#header{
+  border: none;
+}
+
+#profile{
+  width:99.7%;
+}
+
+
+.profile-info{
+    display: grid;
+    justify-content: center;
+    text-align: justify;
+    border: 2px solid black;
+}
+
+#bloglist {
+
+
+  width: 100%;
+
+  border: none;
+  
+  background-color:rgb(241, 239, 250);
+  
+}
+
+#blogpreview{
+    border-bottom: 1px solid #1a0202;
+    text-align: center;
+    
+    
+}
+
+#blogpreview:hover {
+  box-shadow: 1px 3px 5px rgba(97, 6, 6, 0.1);
+  background-color:rgb(255, 255, 255) ;
+}
+
+#content{
+  padding-top: 170px;
+}
+
+
+
+
 .profile-left{
     border: 0;
 }
 .profile-right{
-    background-color: rgb(226, 231, 235);
+    background-color: rgb(13, 56, 92);
     border: 2px solid black;
     border-radius: 5px;
     box-shadow: 2px 2px 10px black;
@@ -31,10 +102,7 @@
     margin: 20px 0;
     border-bottom: 1px solid #fafafa;
   }
-  .blog-preview:hover {
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-    background-color:floralwhite 
- }
+
  
  .blog-preview h1 {
   font-size: 23px ;

@@ -1,0 +1,17 @@
+#container{
+    
+  background-color: rgb(246, 247, 250);
+  max-height: 200px;
+}
+
+#form {
+    padding-left: 150px;
+    padding-top: -200px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#title{
+    text-align: center;
+}

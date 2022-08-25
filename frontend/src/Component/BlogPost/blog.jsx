@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 import Header2 from '../header2';
 import Footer from '../Footer/Footer';
+import './blog.css'
 
 const Blog = () => {
 
@@ -87,41 +88,44 @@ const Blog = () => {
         <Header2></Header2>
         <div className='addPost-form'>
             <div className='post-head'>
-                <h2>Post a Blog </h2>
+                <h2 id='header'>Post a Blog </h2>
                 <hr />
             </div>
 
             <div className='form'>
                 
-                <form action="" className='addPost-form'>
-                    <label htmlFor="BLOG_TITLE"><h3>Title</h3> </label>
-                    <input type="text" name="BLOG_TITLE" id="BLOG_TITLE" onChange={handleChange}  placeholder='Enter Title' required/>
+                <form action="" id='form' className='addPost-form'>
+                    <label htmlFor="BLOG_TITLE" ><h3 id="header2">Title</h3> </label><br/>
+                    <input type="text" name="BLOG_TITLE" id="BLOG_TITLE" onChange={handleChange}  placeholder='     Enter Title' required/>
+                    <br/><br/>
                     
-                    <label htmlFor="BLOG_CONTENT"><h3>Description</h3> </label>
-                    <textarea name="BLOG_CONTENT" id="area" cols="100" rows="5" placeholder='Describe your blog post' onChange={handleChange} required></textarea>
-                    
-                    <label htmlFor="CATEGORY"><h3>Category</h3> </label>
-                    <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='Enter Your Blog Category' required/>
+                    <label htmlFor="BLOG_CONTENT" id='header3'><h3>Description</h3> </label><br/>
+                    <textarea name="BLOG_CONTENT" id="area" cols="100" rows="5" placeholder='  Describe your blog post' onChange={handleChange} required></textarea>
+                    <br/><br/>
+                    <label htmlFor="CATEGORY"><h3>Category</h3> </label><br/>
+                    <input type="text" name="CATEGORY" id="CATEGORY" onChange={handleChange}  placeholder='     Enter Your Blog Category' required/>
+                    <br/>
 
 
-                    <input type="submit" value="Submit" className='createpostBtn' onClick={handleSubmit} />
+                    <input type="submit" id= "button" value="Submit" className='createpostBtn' onClick={handleSubmit} />
                 </form>
             </div>
         </div>
       <br></br> <div></div>
 <div>
   <a href="/showblogs">
-<input type="submit" value="Show All Blogs" width="50px" className='createpostBtn' />
+<input type="submit" value="Show All Blogs" width="50px" id= 'button2' className='createpostBtn' />
 </a>
 </div>
 
-<Footer></Footer>
+
 
    
                 <div>
-                  
+                
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
